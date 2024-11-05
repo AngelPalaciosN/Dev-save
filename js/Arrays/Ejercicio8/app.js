@@ -1,6 +1,7 @@
 "use strict";
-
+//imports
 const readline = require('readline');
+
 // Variables Globales
 
 const rl = readline.createInterface({
@@ -8,13 +9,9 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-let nums = [];
-
 let matriz = [];
 
 let min,max;
-
-
 
 function restart(){
     this.res = function(){
@@ -26,7 +23,7 @@ function restart(){
 //Funcion principal
 function matriz_max(){
     this.ingresar = function(){
-        rl.question('Que numero desea añadir a la matriz? ', (answer) => {
+        rl.question('Ingrese un numero: ', (answer) => {
             let num = parseInt(answer);
             let fila = answer.split(',').map(num => parseInt(num.trim()));
             if (isNaN(num)){
@@ -42,10 +39,11 @@ function matriz_max(){
                     max = Math.max(...matriz.flat());
                     console.table(matriz);
                     console.log();
-                    console.log(`El numero menor es ${min} y el mayor es ${max}`)
+                    console.log(`El numero menor es ${min} y el mayor es ${max}`);
+                    new esquina().esc();
                     rl.close();
                 }else{
-                    console.log('Elija una opcion correcta')
+                    console.log('Elija una opcion correcta');
                     new restart().res();
                 }
                 });
@@ -53,6 +51,20 @@ function matriz_max(){
         }
 }
 
+function esquina(){
+    let resul = 0;
+    this.esc = function(){
+        for (let i = 0; i < matriz.length; i++) {
+            for (let j = 0; j < matriz.length; j++) {
+                matriz[i][j] = this.resul;
+                console.log(resul)             
+            }
+            
+        }
+    }
+
+
+}
 
 //Metodo
 function main(){
