@@ -21,11 +21,9 @@ public class App extends Application {
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
         
-        // Si deseas mantener el saludo, puedes llamarlo aquí
         Saludo saludo = new Saludo();
         saludo.saludar();
 
-        // Si deseas ejecutar un ejercicio, también puedes hacerlo aquí
         Ejercicio1 ejercicio1 = new Ejercicio1();
         ejercicio1.ejercicio();
     }
