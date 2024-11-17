@@ -1,5 +1,3 @@
-
-
 class calculadora:
     def __init__(self, num='',can=0,guardar=None):
         self.num = num
