@@ -1,5 +1,6 @@
 "use strict";
 // Librerias (Imports)
+//Ejecutar todo con consola
 const readline = require('readline');
 
 const rl = readline.createInterface({
@@ -8,8 +9,11 @@ const rl = readline.createInterface({
 });
 
 // Clases
-
 class Empleados {
+    _nombre = '';
+    _salarioBruto = 0;
+    _salarioNeto = 0;
+    _salarioTotal = 0;
     constructor(nombre = '', salarioBruto = 0) {
         this._nombre = nombre;
         this._salarioBruto = salarioBruto;
