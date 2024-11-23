@@ -9,7 +9,6 @@ const rl = readline.createInterface({
 });
 
 // Clases
-
 class Tienda {
     _nombre = '';
     _precio = 0;
