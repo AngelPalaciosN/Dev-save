@@ -1,0 +1,76 @@
+@use 'variables' as *;
+
+$scroll-o: $primary;
+$scroll-i: $secondary;
+
+body {
+    display: grid;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    overflow-x: hidden; // Previene scroll horizontal no deseado
+
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    &::-webkit-scrollbar-track {
+        background: $scroll-i;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $scroll-o;
+        border-radius: 0.5rem;
+    }
+}
+
+section {        
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+    margin: auto;
+    min-height: 90vh; // Cambiado de height a min-height
+    width: 100%; // Cambiado de 110vh a 100%
+    padding: 0 5%; // Añadido padding para mejor responsive
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#root {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+// Media Queries para Responsividad
+@media screen and (max-width: 1200px) {
+    section {
+        height: auto;
+        padding: 0 3%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 2%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px; // Reduce tamaño de fuente en dispositivos pequeños
+    }
+
+    section {
+        padding: 0 1%;
+    }
+}
