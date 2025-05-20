@@ -1,0 +1,25 @@
+@use '../variables' as *;
+@use '../responsive';
+
+
+header{
+        h1{
+        color: $terciar;
+        text-align: center;
+        display: grid;
+        }
+}
+
+#caja1{
+    display:grid;
+    background-color: $primary;
+    height: 50rem;
+    align-items: center;
+    border-radius: 2rem;
+    h1{
+        color: $terciar;
+        text-align: center;
+        display: grid;
+    }
+
+}

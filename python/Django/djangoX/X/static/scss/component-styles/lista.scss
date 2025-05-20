@@ -1,0 +1,44 @@
+@use '../variables' as *;
+@use '../responsive';
+@use '../style.scss';
+
+#lista-container {
+    display:grid;
+    background-color: $primary;
+    height: 50rem;
+    align-items: center;
+    border-radius: 2rem;
+    padding: 2rem;
+    color: $terciar;
+
+    h2{
+        text-align: center;
+    }
+    .Lista{
+        display: grid;
+        border: solid black 1px;
+        padding: 1rem;
+        border-radius: 1rem;
+        ul{
+            border-bottom: solid black 1px;
+            margin-bottom: 2rem;
+        }
+
+        li{
+            margin-bottom: 2rem;
+        }
+
+        .btn-custom-2 {
+            @extend .btn-custom;
+            display: grid;
+            background-color: $secondary;
+            border-color: $secondary;
+            margin-inline: 0rem;
+
+            &:hover {
+                background-color: $quatiar;
+                border-color: $quatiar;
+            }
+        }
+    }
+}
