@@ -22,6 +22,15 @@ def formulario(request):
         return redirect('lista')
     return render(request, 'X/formulario.html')
 
+def editar_usuario(request, id):
+    usuario = Usuarios.objects.get(id=id)
+    if request.method == 'POST':
+        usuario.nombre = request.POST['nombre']
+        usuario.correo = request.POST['correo']
+        usuario.save()
+        return redirect('lista')
+    return render(request, 'X/modules/editar_usuario.html', {'usuario': usuario})
+
 def eliminar_usuario(request, id):
     usuario = Usuarios.objects.get(id=id)
     usuario.delete()

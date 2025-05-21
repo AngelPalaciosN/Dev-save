@@ -20,7 +20,8 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name="index"),
-    path('formulario/', views.formulario, name="formulario"),  # New route
+    path('formulario/', views.formulario, name="formulario"),
     path('lista/', views.lista, name="lista"),
+    path('editar_usuario/<int:id>/', views.editar_usuario, name='editar_usuario'),
     path('eliminar_usuario/<int:id>/', views.eliminar_usuario, name='eliminar_usuario'),
 ]

@@ -12134,9 +12134,13 @@ section {
 }
 #lista-container .Lista li {
   margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+}
+#lista-container .Lista div {
+  display: flex !important;
+  justify-content: space-between;
 }
 #lista-container .Lista .btn-custom-2 {
-  display: grid;
   background-color: #3394fc;
   border-color: #3394fc;
   margin-inline: 0rem;
