@@ -1,0 +1,101 @@
+.container {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -1rem;
+  margin-left: -1rem;
+}
+
+.d-none {
+  display: none !important;
+}
+
+@media (min-width: 576px) {
+  .d-sm-none {
+    display: none !important;
+  }
+  .d-sm-block {
+    display: block !important;
+  }
+  .d-sm-flex {
+    display: flex !important;
+  }
+}
+@media (min-width: 768px) {
+  .d-md-none {
+    display: none !important;
+  }
+  .d-md-block {
+    display: block !important;
+  }
+  .d-md-flex {
+    display: flex !important;
+  }
+}
+@media (min-width: 992px) {
+  .d-lg-none {
+    display: none !important;
+  }
+  .d-lg-block {
+    display: block !important;
+  }
+  .d-lg-flex {
+    display: flex !important;
+  }
+}
+#formulario-container {
+  display: grid;
+  background-color: #54ffa1;
+  height: 50rem;
+  align-items: center;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+#formulario-container form .form-label {
+  color: #000000;
+}
+#formulario-container form .form-control {
+  background-color: #fff;
+  border-color: #3394fc;
+  color: #000000;
+}
+#formulario-container form .btn-primary {
+  background-color: #3394fc;
+  border-color: #3394fc;
+}
+#formulario-container form .btn-primary:hover {
+  background-color: #047af8;
+  border-color: #047af8;
+}/*# sourceMappingURL=inicio.css.map */

@@ -1,5 +1,6 @@
 @use '../variables' as *;
 @use '../responsive';
+@use '../style.scss';
 
 #lista-container {
     display:grid;

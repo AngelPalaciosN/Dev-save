@@ -11,7 +11,9 @@
   </head>
   <body>
     <header class="container">
-        <h1>Lista de registros</h1>
+        {% if request.session.user_nombre %}
+            <h1>Lista de usuarios, Bienvenido, {{ request.session.user_nombre }}!</h1>
+        {% endif %}
     </header>
 
     <section class="container">

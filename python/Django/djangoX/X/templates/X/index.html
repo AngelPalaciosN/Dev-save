@@ -11,15 +11,25 @@
   </head>
   <body>
     <header class="container">
-        <h1>Bienvendo al formulario de registros</h1>
+        {% if request.session.user_nombre %}
+            <h1>Bienvenido, {{ request.session.user_nombre }}!</h1>
+        {% endif %}
     </header>
 
 
    <section class="container">
       <div class="container" id='caja1'>
         <h1>Vaya al siguiente enlace y acceda al formulario</h1>
-        <a href="{% url 'formulario' %}" class="btn-custom">Ir a Formulario</a>
+        <a href="{% url 'formulario' %}" class="btn-custom">Ir a registrarse</a>
+        {% if request.session.user_id %}
+            <a href="{% url 'logout' %}" class="btn-custom">Cerrar sesion</a>
+        {% else %}
+            <a href="{% url 'inicio' %}" class="btn-custom">Iniciar sesion</a>
+        {% endif %}
+        {% if request.session.user_id%}
         <a href="{% url 'lista' %}" class="btn-custom">Ir a Lista</a>
+        {% else %}
+        {% endif %}
       </div>
 
 

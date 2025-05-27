@@ -22,6 +22,8 @@ urlpatterns = [
     path('', views.index, name="index"),
     path('formulario/', views.formulario, name="formulario"),
     path('lista/', views.lista, name="lista"),
+    path('inicio/', views.inicio, name="inicio"),
     path('editar_usuario/<int:id>/', views.editar_usuario, name='editar_usuario'),
     path('eliminar_usuario/<int:id>/', views.eliminar_usuario, name='eliminar_usuario'),
+    path('logout/', views.logout, name='logout'),
 ]
